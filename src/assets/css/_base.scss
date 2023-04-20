@@ -1,0 +1,37 @@
+/* Base */
+html,body{
+	margin:0 auto;
+	padding:0;
+}
+
+body{
+	background-color: $bg-light;
+	&.dark-mode, &.dark-mode :is(header){
+		background-color: $bg-dark;
+	}
+}
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+}
+a img{
+	border:0;
+	-moz-outline-style:none;
+	outline: none;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+a{
+	-moz-outline-style:none;
+	outline:none;
+	text-decoration:none;
+	-webkit-tap-highlight-color:transparent;
+    text-decoration: none;
+}
+h1,h2,h3 {
+    margin: 0;
+  }

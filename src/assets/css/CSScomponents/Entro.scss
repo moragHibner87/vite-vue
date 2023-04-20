@@ -1,0 +1,25 @@
+.entro {
+    p{
+        font-size:1.8vw;
+        max-width:80%;
+        margin:0 auto;
+    }
+  }
+  .categories .row{
+    padding:5% 10%;
+    background-color: #f3dff5;
+  }
+  .categories .row:nth-of-type(2n + 2){
+    background-color: rgb(202, 235, 224);
+    flex-direction: row-reverse;
+  }
+  .categories .row .flex-1{
+    padding:0 5%;
+  }
+  .categories .row .title{
+    font-size:2.5vw;
+  }
+  .cat-wrap-img{
+    aspect-ratio:1.5/1;
+    width:45%;
+  }

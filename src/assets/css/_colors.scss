@@ -1,0 +1,29 @@
+:root{
+    --primary: #80b4c6;
+    --light: #ccc;
+    --text: #0c1d4d;
+    --white: white;
+}
+
+/* Colors */
+$primary: #80b4c6;
+$light: #ccc;
+$text: #0c1d4d;
+$white: white;
+$bg-light: white;
+
+$primary-dark: #3c394d;
+$text-dark: white;
+$bg-dark: #1b1925;
+
+
+
+.text-primary{
+    color: $primary;
+}
+.text-text{
+    color: $text;
+}
+.bg-text{
+    background-color: $text;
+}
