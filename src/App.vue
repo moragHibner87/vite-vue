@@ -1,5 +1,5 @@
 <template>
-  <div class="my-app-wrap" :class="{'dark' : isDarkMode}">
+  <div class="my-app-wrap" v-cloak :class="{'dark' : isDarkMode}">
     <Header @mode="toggleMode" />
     <main>
       <Hero/>
@@ -45,4 +45,9 @@ export default {
   }
 }
 </script>
+<style>
+  [xv-cloak]{
+    display: none;
+  }
+</style>
 

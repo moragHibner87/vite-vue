@@ -7,16 +7,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function animationInOut(el) {
     onMounted(() => {
-       
-        gsap.to(el.value, {
+        gsap.to(el.value.children, {
             scrollTrigger: {
                 trigger: el.value,
-                start: "top 20%",
+                start: "top 30%",
                 scrub: true,
                 toggleActions: "restart pause none reverse"
             },
-            opacity: 0,
-            y: -60
+            autoAlpha: 0,
+            y: -100,
+            stagger: .5,
+            ease: 'back.out(1.7)'
         })
     })
 }

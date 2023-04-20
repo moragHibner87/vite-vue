@@ -23,3 +23,35 @@
     aspect-ratio:1.5/1;
     width:45%;
   }
+  .card{
+    width:400px;
+    aspect-ratio: 1.6/1;
+    background-color: rgb(13, 7, 42);
+    border-radius:15px;
+    display:flex;
+    flex-direction: column;
+    place-content: center;
+    margin: 50px auto;
+    position: relative;
+    transform: perspective(5000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+    transform-style: preserve-3d;
+    color: pink;
+    text-shadow: 0 0 10px currentColor;
+    &::after,&::before{
+      content: "";
+      display:block;
+      border-radius:15px;
+      position: absolute;
+    }
+    &::after{
+      inset: -1rem;
+      background: linear-gradient(90deg, red, blue);
+      transform: translateZ(-50px); 
+    }
+    &::before{
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.464);
+      filter: blur(15px);
+      transform: translateZ(-49px);
+    }
+  }
