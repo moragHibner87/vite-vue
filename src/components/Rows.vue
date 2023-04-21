@@ -29,8 +29,39 @@
         </section>
 </template>
 
-<script>
-export default {
-    name: 'Rows'
-}
+<script setup>
+import { onMounted } from 'vue';
+import { gsap, Power2  } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+//const containers = ref(nul)
+onMounted(() => {
+        //reveal
+      const containers = document.querySelectorAll(".reveal");
+      if (containers.length > 0) {
+        containers.forEach((container) => {
+          let image = container.querySelector("img");
+          let tl = gsap.timeline({
+              scrollTrigger: {
+                  trigger: container,
+                  start: "top bottom",
+                  toggleActions: "restart none none reverse"
+              }
+            });
+            tl.from(container, 1.5, {
+                xPercent: -100,
+                ease: Power2.out
+            });
+            tl.from(image, 1.5, {
+                xPercent: 100,
+                scale: 1.3,
+                delay: -1.5,
+                ease: Power2.out
+            });
+        });
+      }
+    })
+
 </script>

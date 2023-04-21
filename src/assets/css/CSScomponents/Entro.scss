@@ -37,6 +37,7 @@
     transform-style: preserve-3d;
     color: pink;
     text-shadow: 0 0 10px currentColor;
+    transition: .3s;
     &::after,&::before{
       content: "";
       display:block;
