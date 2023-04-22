@@ -5,6 +5,7 @@
       <Hero/>
       <Entro/>
       <Rows/>
+      <Slide/>
     </main>
     <Footer/>
     <HelloWorld msg="Hello Vue 3.0 + Vite!!" />
